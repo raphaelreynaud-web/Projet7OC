@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    width: 1240px;
+    max-width: 1440px;
+    margin: auto;
+}
+.header {
+    width: 1240px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+.header_name {
+    display: flex;
+    color: #FF6060;
+    font-size: 30px;
+}
+.header_name p {
+    margin: 0;
+    margin-right: 3px;
+    font-size: 50px;
+}
+.header_menu_list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    margin-right: 30px;
+    padding: 0;
+}
+.header_menu_list li {
+    margin-left: 80px;
+}
+.header_menu_list li a {
+    text-decoration: none;
+    color: #FF6060;
+    font-size: 20px;
+}
+.header_menu_list li a:hover {
+    color: #FF6060;
+    text-decoration: underline;
+}
+.tag {
+    height: 25px;
+    background-color: #FF6060;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.tag p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.thumbnail {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+}
+
+.thumbnail p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    font-size: 18px;
+    width: 90%;
+}
+
+.thumbnail img {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    width: 100%;
+    height: 100%;
+    /* Cover */
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.pagescroller {
+    width: 582px;
+    position: relative;
+}
+
+.pagescroller_name {
+    width: 532px;
+    background-color: #FF6060;
+    border: none;
+    height: 52px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 10;
+}
+
+.pagescroller_options, .pagescroller_text {
+    position: relative;
+    margin-top: -10px;
+    background-color: #F6F6F6;
+    width: 582px;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.pagescroller_options_list {
+    margin: 0;
+    padding: 25px;
+    display: block;
+    list-style-type: none;
+}
+
+.pagescroller_options_list li {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #FF6060;
+    font-size: 18px;
+}
+
+.pagescroller_text p {
+    color: #FF6060;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    word-wrap: break-word;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.aboutscroller {
+    width: 1023px;
+    position: relative;
+}
+
+.aboutscroller_name {
+    width: 973px;
+    background-color: #FF6060;
+    border: none;
+    height: 52px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 10;
+}
+
+.aboutscroller_text {
+    border-radius: 15px;
+    position: relative;
+    margin-top: -10px;
+    background-color: #F6F6F6;
+    width: 1023px;
+    z-index: -1;
+}
+
+.aboutscroller_text p {
+    border-radius: 5px;
+    color: #FF6060;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    word-wrap: break-word;
+}
+
+.display-buildings {
+    max-width: 1240px;
+    margin-top: 30px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+footer {
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag_list {
+    display: flex;
+}
+
+.building_title {
+    color: #FF6060;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.building_location {
+    color: #FF6060;
+    font-weight: 100;
+}
+
+.building_informations {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+}
+.informations_people {
+    display : flex;
+}
+
+.informations_people p {
+    margin-right: 10px;
+    text-align: right;
+    width: 90px;
+    color: #FF6060;
+    font-weight: 100;
+}
+
+.informations_people img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+
+.building_informations_right {
+    margin-top: 10px;
+    display: flex;
+    align-items:flex-end ;
+    flex-direction: column;
+    width: 300px;
+}
+
+.informations_stars {
+    margin-top: 30px;
+    display: flex;
+}
+
+.informations_stars img {
+    margin-left: 10px;
+}
+
+.building_description {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
