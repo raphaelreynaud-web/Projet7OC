@@ -11,7 +11,11 @@ export default function Home(){
     }, [])
     return (<div className="container">
         <Header />
-        <img src="/images/BackgroundHome.png" />
+        <div className="main-bg">
+            <div className="main-bg-text">
+            </div>
+            <h1>Chez vous, partout et ailleurs</h1>
+        </div>
         <div className="display-buildings">
             {logements.map((logement, index) => (
                 <Thumbnail name={logement.title} url={logement.cover} id={logement.id} />

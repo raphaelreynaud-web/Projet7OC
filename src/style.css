@@ -46,6 +46,40 @@
     color: #FF6060;
     text-decoration: underline;
 }
+.main-bg {
+    position: relative;
+    width: 1240px;
+    height : 223px;
+    /* Darken blend*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    background-image: url("http://localhost:3000/images/BackgroundHome.png");
+}
+.main-bg-text {
+    color: white;
+    width: 1240px;
+    background-color: #000000;
+    opacity: 0.5;
+    height: 223px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-bg h1 {
+    color: white;
+    width: 1240px;
+    height: 223px;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 .tag {
     height: 25px;
     background-color: #FF6060;
@@ -272,4 +306,38 @@ footer {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
+}
+
+.caroussel {
+    background-color: #FF6060;
+    width: 1240px;
+    height: 415px;
+    border-radius: 45px;
+    position: relative;
+    object-fit: cover;
+}
+
+.car-right {
+    position: absolute;
+    right: 15px;
+    top: 45%;
+}
+
+.car-left {
+    position: absolute;
+    left: 15px;
+    top: 45%;
+}
+
+.car-img {
+    width: 1240px;
+    height: 415px;
+    border-radius: 45px;
+}
+
+.car-img img {
+    width: 1240px;
+    height: 415px;
+    border-radius: 45px;
+    object-fit: cover;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import Caroussel from "../components/Caroussel";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import PageScrollerOptions from "../components/PageScrollerOptions";
@@ -16,6 +17,7 @@ export default function Buildings(){
     useEffect(() => {
         setBuilding(logements.filter(logement => logement.id === params.id)[0])
         setLoading(false);
+        console.log(building)
     }, [])
 
     if (loading) {
@@ -25,6 +27,7 @@ export default function Buildings(){
         var nostar = maxrating - parseInt(building.rating);
         return <div className="container">
         <Header />
+        <Caroussel images={building.pictures} />
         <div className="building_informations">
             <div className="building_informations_left">
                 <h1 className="building_title">{building.title}</h1>
