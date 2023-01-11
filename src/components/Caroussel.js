@@ -3,6 +3,7 @@ import { useState } from "react"
 export default function Caroussel({images}){
     const [carImages, setCarImages] = useState(images)
     const [carIndex, setCarIndex] = useState(0)
+    
     function nextImage(){
         if (carIndex < carImages.length - 1){
             setCarIndex(carIndex + 1)
