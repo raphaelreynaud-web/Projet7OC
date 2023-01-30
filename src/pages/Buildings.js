@@ -16,7 +16,7 @@ export default function Buildings(){
     useEffect(() => {
         setBuilding(logements.filter(logement => logement.id === params.id)[0])
         setLoading(false);
-    }, [])
+    }, [params.id])
 
     if (loading) {
         return <div>Chargement...</div>
@@ -42,14 +42,14 @@ export default function Buildings(){
             <div className="building_informations_right">
                 <div className="informations_people">
                     <p>{building.host.name}</p>
-                    <img width={"64px"} src={building.host.picture} />
+                    <img width={"64px"} src={building.host.picture} alt="host_picture" />
                 </div>
                 <div className="informations_stars">
                     {[...Array(parseInt(building.rating))].map((star, index) => (
-                        <img key={index} src="/images/full_star.png" />
+                        <img alt="full_star" key={index} src="/images/full_star.png" />
                     ))}
                     {[...Array(nostar)].map((star, index) => (
-                        <img key={index} src="/images/empty_star.png" />
+                        <img alt="empty_star" key={index} src="/images/empty_star.png" />
                     ))}
                 </div>
             </div>
