@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Caroussel from "../components/Caroussel";
+import Error from "../components/Error";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import PageScrollerOptions from "../components/PageScrollerOptions";
@@ -11,22 +12,26 @@ import { useParams } from "react-router-dom";
 
 export default function Buildings(){
     const [building, setBuilding] = useState(null);
-    const [loading, setLoading] = useState(true); 
+    const [loading, setLoading] = useState(true);
     const params = useParams();
 
     useEffect(() => {
         setBuilding(logements.filter(logement => logement.id === params.id)[0])
         setLoading(false);
-        console.log(building)
     }, [])
 
     if (loading) {
         return <div>Chargement...</div>
-    } else {
+    }
+    else if (building === undefined) {
+        return <div className="container">
+            <Error />
+        </div>
+    }
+    else {
         var maxrating = 5;
         var nostar = maxrating - parseInt(building.rating);
         return <div className="container">
-        <Header />
         <Caroussel images={building.pictures} />
         <div className="building_informations">
             <div className="building_informations_left">
@@ -55,7 +60,6 @@ export default function Buildings(){
                 <PageScrollerText name={"Description"} text={building.description} />
                 <PageScrollerOptions name={"Equipements"} options={building.equipments} />
         </div>
-        <Footer />
     </div>
     }
 }

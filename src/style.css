@@ -21,11 +21,11 @@
     color: #FF6060;
     font-size: 30px;
 }
-.header_name p {
-    margin: 0;
-    margin-right: 3px;
-    font-size: 50px;
+
+.header_name svg {
+    height: 50px;
 }
+
 .header_menu_list {
     display: flex;
     align-items: center;
@@ -47,8 +47,10 @@
     text-decoration: underline;
 }
 .main-bg {
+    margin-top: 20px;
+    margin-bottom: 20px;
     position: relative;
-    width: 1240px;
+    max-width: 1240px;
     height : 223px;
     /* Darken blend*/
     background-position: center;
@@ -57,9 +59,25 @@
     border-radius: 10px;
     background-image: url("http://localhost:3000/images/BackgroundHome.png");
 }
+
+.about-banner {
+    max-width: 1240px;
+    height: 223px;
+    background-image: url("http://localhost:3000/images/BackgroundAbout.png");
+    border-radius: 20px;
+}
+
+.about-banner-filter {
+    max-width: 1240px;
+    height: 223px;
+    background-color: #000000;
+    border-radius: 20px;
+    opacity: 0.3;
+}
+
 .main-bg-text {
     color: white;
-    width: 1240px;
+    max-width: 1240px;
     background-color: #000000;
     opacity: 0.5;
     height: 223px;
@@ -83,7 +101,6 @@
 .tag {
     height: 25px;
     background-color: #FF6060;
-    min-width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,12 +108,14 @@
     font-size: 14px;
     border-radius: 10px;
     margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .tag p {
-    margin-left: 15px;
-    margin-right: 15px;
+    white-space: nowrap;
 }
+
 
 .thumbnail {
     position: relative;
@@ -190,6 +209,9 @@
 .aboutscroller {
     width: 1023px;
     position: relative;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .aboutscroller_name {
@@ -205,6 +227,7 @@
     padding-left: 25px;
     padding-right: 25px;
     z-index: 10;
+    font-size: 24px;
 }
 
 .aboutscroller_text {
@@ -224,6 +247,9 @@
     padding-left: 20px;
     padding-bottom: 30px;
     padding-right: 20px;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
     word-wrap: break-word;
 }
 
@@ -245,6 +271,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
 }
 
 .tag_list {
@@ -255,6 +282,7 @@ footer {
     color: #FF6060;
     font-size: 30px;
     font-weight: 100;
+    max-width: 600px;
 }
 
 .building_location {
@@ -323,6 +351,18 @@ footer {
     top: 45%;
 }
 
+.car-right svg {
+    width: 50px;
+    height: 50px;
+    fill: white;
+}
+
+.car-left svg {
+    width: 50px;
+    height: 50px;
+    fill: white;
+}
+
 .car-left {
     position: absolute;
     left: 15px;
@@ -335,6 +375,14 @@ footer {
     border-radius: 45px;
 }
 
+.car-middle {
+    position: absolute;
+    bottom: 25px;
+    font-size: 18px;
+    left: 50%;
+    color: #F6F6F6;
+}
+
 .car-img img {
     width: 1240px;
     height: 415px;
@@ -342,9 +390,44 @@ footer {
     object-fit: cover;
 }
 
+.error {
+    color: #FF6060;
+    width: 1240px;
+}
+
+.error h1 {
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size : 288px;
+    font-weight: 700;
+    margin-top: 130px;
+    margin-bottom:0;
+}
+
+.error p {
+    font-size: 36px;
+    font-weight: 500;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error a {
+    display: block;
+    width: 300px;
+    color: #FF6060;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    margin-top: 200px;
+    font-weight: 500;
+}
+
+
 @media screen and (max-width: 1240px) {
     .container {
-        width: 100%;
+        width: 95%;
     }
     .header {
         width: 100%;
@@ -358,24 +441,244 @@ footer {
     }
 
     .header_menu_list li a {
-        font-size: 12px;
+        font-size: 15px;
         /*Caps*/
         text-transform: uppercase;
+    }
+
+    .display-buildings {
+        max-width: 100%;
+        background-color: transparent;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .thumbnail {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-bg {
+        width: 100%;
+        height: 223px;
+        background-size: cover;
+    }
+
+    .main-bg h1 {
+        width: 100%;
+        top: 40%;
+        font-size: 20px;
+    }
+
+    .main-bg-text {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+    }
+
+    .caroussel {
+        width: 100%;
+        height: 415px;
+        border-radius: 45px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .car-img {
+        width: 100%;
+        height: 415px;
+        border-radius: 45px;
+        object-fit: cover;
+    }
+
+    .car-img img {
+        width: 100%;
+        height: 415px;
+        border-radius: 45px;
+        object-fit: cover;
+    }
+
+    .building_informations {
+        width: 100%;
+    }
+
+    .building_description {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .error {
+        width: 100%;
+    }
+
+    .error h1 {
+        font-size : 188px;
+    }
+
+    .error p {
+        text-align: center;
+        font-size: 24px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .aboutscroller {
+        width: 100%;
+    }
+
+    .aboutscroller_name {
+        width: 100%;
+        padding: 0;
+    }
+
+    .aboutscroller_name p{
+        padding-left: 20px;
+        font-size: 17px;
+    }
+
+    .aboutscroller_name img {
+        padding-right: 20px;
+    }
+
+    .aboutscroller_text {
+        width: 100%;
+    }
+
+    .aboutscroller_text p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width : 820px) {
+
+    .caroussel {
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .car-img {
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .car-img img {
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .building_informations {
+        flex-direction: column;
+    }
+    .building_informations_right {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .informations_stars {
+        margin-top: 0px;
+    }
+
+    .tag {
+        height: 22px;
+        border-radius: 5px;
+        min-width: 90px;
+    }
+
+    .tag p {
+        font-size: 12px;
+    }
+
+    .informations_stars img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .display-buildings {
+        max-width: 100%;
+        margin-top: 0px;
+        background-color: transparent;
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .error h1 {
+        font-size : 128px;
+        margin-top: 50px;
+    }
+
+    .error p {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .error a {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .pagescroller {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .pagescroller_name {
+        width: 100%;
+        padding: 0;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    .pagescroller_name p {
+        padding-left: 20px;
+        font-size: 13px;
+    }
+
+    .pagescroller_name img {
+        padding-right: 20px;
+        height: 12px;
+    }
+
+    .pagescroller_options {
+        width:100%;
+    }
+
+    .pagescroller_text {
+        width: 100%;
+    }
+
+    .pagescroller_text p {
+        font-size: 15px;
+    }
+
+    .pagescroller_options_list li {
+        font-size: 15px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .header {
-        width: 335px;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .header svg {
+        width: 120px;
     }
 
     .main-bg {
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        width: 335px;
+        width: 100%;
         height : 111px;
         /* Darken blend*/
         background-size: cover;
@@ -388,7 +691,7 @@ footer {
         margin-left: auto;
         margin-right: auto;
         color: white;
-        width: 335px;
+        width: 100%;
         background-color: #000000;
         opacity: 0.5;
         height: 111px;
@@ -400,15 +703,16 @@ footer {
     
     .main-bg h1 {
         color: white;
-        width: 100%;
+        width: 60%;
         height: 111px;
         position: absolute;
-        right: 0;
-        top: 30%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        left: 0;
+        top: 20%;
+        margin-left: 20px;
+        margin-right: 0;
+        text-align: left;
         font-size: 20px;
+        font-weight: 100;
     }
     .display-buildings {
         max-width: 100%;
@@ -420,7 +724,7 @@ footer {
     }
 
     .thumbnail {
-        width: 335px;
+        width: 100%;
         height: 255px;
         margin-top: 20px;
         border-radius: 10px;
@@ -430,7 +734,7 @@ footer {
 
     .caroussel {
         background-color: #FF6060;
-        width: 335px;
+        width: 100%;
         height: 255px;
         border-radius: 10px;
         margin-left: auto;
@@ -450,13 +754,13 @@ footer {
     }
     
     .car-img {
-        width: 335px;
+        width: 100%;
         height: 255px;
         border-radius: 10px;
     }
     
     .car-img img {
-        width: 335px;
+        width: 100%;
         height: 255px;
         border-radius: 10px;
         object-fit: cover;
@@ -466,7 +770,7 @@ footer {
         margin-right: auto;
         display: block;
         justify-content: space-between;
-        width: 335px;
+        width: 100%;
     }
     .building_informations_left {
         width: 100%;
@@ -513,6 +817,7 @@ footer {
 
     .building_title {
         font-size: 20px;
+        max-width: 100%;
     }
 
     .building_location {
@@ -526,75 +831,59 @@ footer {
         border-radius: 5px;
         margin-right: 10px;
         font-weight: 100;
+        padding-right: 8px;
+        padding-left: 8px;
     }
-    
+
     .tag p {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .pagescroller {
-        width: 335px;
-        position: relative;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .pagescroller_name {
-        width: 335px;
-        height: 30px;
-        background-color: #FF6060;
-        padding-left: 0px;
-        padding-right: 0px;
-        z-index: 10;
-        border-radius: 5px;
-    }
-
-    .pagescroller_name p {
-        font-size: 13px;
-        margin-left: 20px;
-    }
-
-    .pagescroller_name img {
-        width: 15px;
-        margin-right : 10px;
-    }
-
-    .pagescroller_options, .pagescroller_text {
-        width: 335px;
-    }
-
-    .pagescroller_text p {
-        padding-top: 20px;
-        padding-left: 20px;
-        padding-bottom: 20px;
-        padding-right: 20px;
-        word-wrap: break-word;
-        font-size: 12px;
-        line-height: 18px;
-    }
-
-    .pagescroller_options_list {
-        margin: 0;
-        padding: 0px;
-        padding-top: 30px;
-        padding-left: 12px;
-        padding-bottom: 5px;
-        display: block;
-        list-style-type: none;
-    }
-    
-    .pagescroller_options_list li {
-        font-weight: 400;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 5px;
-        color: #FF6060;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .building_description {
         display: block;
+    }
+
+    .header_menu_list li a {
+        font-size: 13px;
+    }
+
+    .aboutscroller_name {
+        height: 35px;
+        border-radius: 5px;
+    }
+
+    .aboutscroller_name p {
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+    .aboutscroller_name img {
+        padding-right: 20px;
+        height: 13px;
+    }
+
+    .aboutscroller_text p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .error h1 {
+        margin-top: 100px;
+        font-size: 96px;
+    }
+
+    .error p {
+        font-size: 18px;
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .error a {
+        margin-bottom: 100px;
+    }
+
+    .about-banner {
+        background-position: center;
+        background-size: auto;
     }
 }

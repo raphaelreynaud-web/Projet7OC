@@ -5,12 +5,7 @@ import logements from "./logements.json"
 import { useEffect } from "react";
 
 export default function Home(){
-    
-    useEffect(() => {
-        console.log(logements)
-    }, [])
     return (<div className="container">
-        <Header />
         <div className="main-bg">
             <div className="main-bg-text">
             </div>
@@ -18,10 +13,9 @@ export default function Home(){
         </div>
         <div className="display-buildings">
             {logements.map((logement, index) => (
-                <Thumbnail name={logement.title} url={logement.cover} id={logement.id} />
+                <Thumbnail key={index} name={logement.title} url={logement.cover} id={logement.id} />
             ))}
         </div>
-        <Footer />
     </div>
         
     )
