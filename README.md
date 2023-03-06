@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Project Title : Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
+Kasa is a vacation renting web application. This project have 3 pages : Home, Building and Error. When a user select a building on the home page, that redirect him to the building page with the information of the building he clicked on.
 
-## Available Scripts
+## Project Goals
+- Integrating Front-end Mockup
+- Create a good React project structure with pages, components and layout
+- Integrating data from JSON file
+- Navigating with React-Router
 
-In the project directory, you can run:
+## Technologies Used
+- HTML
+- CSS
+- JS
+- ReactJS
+- React-Router
 
-### `npm start`
+## Project Structure
+```
+Kasa/
+│
+├─ src
+    ├─ components # components folder
+    ├─ pages # pages folder
+    ├─ App.js # a place which you can look all the components
+    ├─ index.js # central point of the project
+    ├─ router.js # the BrowserRouter of the project
+    ├─ style.css # css of the project
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to start the project
+1. You need to install the dependencies using :
+```
+npm install
+```
+2. The start with :
+```
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Features
+1. Displaying all the buildings
+2. Display building on the building page by the id
+3. Getting the datas from JSON file
+4. Managing the routes with the router
+5. Displaying errors if the id or the page don't exist
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+This is a easy but full projects in ReactJS using the state, the lifecycle and everything inside is designed in functionnal components and not in class components. Functionnal components are easier to maintain.
