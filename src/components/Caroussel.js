@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Caroussel({images}){
     const [carImages, setCarImages] = useState(images)
@@ -18,6 +18,10 @@ export default function Caroussel({images}){
             setCarIndex(carImages.length - 1)
         }
     }
+
+    useEffect(() => {
+        setCarImages(images)
+    }, [images])
     
     return <div className="caroussel">
         {carImages.length > 1 ? <div className="car-left" onClick={(e) => previousImage()}>
