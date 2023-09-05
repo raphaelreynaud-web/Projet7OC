@@ -19,12 +19,6 @@ var router = createBrowserRouter([
             {
                 // Logement
                 path: "/logement/:id",
-                loader : ({params}) => {
-                    return params.id
-                },
-                action : ({params}) => {
-                    return params.id
-                },
                 element : <Buildings />,
             },
             {
