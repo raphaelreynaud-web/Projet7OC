@@ -1,8 +1,6 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Thumbnail from "../components/Thumb";
 import logements from "./logements.json"
-import { useEffect } from "react";
+
 
 export default function Home(){
     return (<div className="container">
